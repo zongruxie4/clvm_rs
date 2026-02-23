@@ -44,7 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install maturin==1.12.2
+          python -m pip install maturin==1.12.2   # 1.12.3 changes how `--sdist` produces artifacts, breaking CI
 
       - name: Build MacOs with maturin on Python ${{ matrix.python }}
         if: startsWith(matrix.os, 'macos')
